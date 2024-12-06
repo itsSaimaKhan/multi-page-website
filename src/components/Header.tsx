@@ -16,8 +16,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-blue-950 text-white py-5 flex justify-between items-center px-10 relative z-10">
-      <h1 className="text-2xl font-bold">Watch World</h1>
+    <header className="bg-blue-950 text-white py-4 sm:py-5 flex justify-between items-center px-6 sm:px-10 relative z-10">
+      <h1 className="text-xl sm:text-2xl font-bold">Watch World</h1>
 
       {/* Desktop Navbar */}
       <nav className="hidden md:flex gap-10 text-white font-bold">
@@ -48,7 +48,7 @@ const Header = () => {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } absolute top-0 left-0 w-full h-full bg-blue-700 p-5 md:hidden z-20`}
+        } absolute top-0 left-0 w-full h-full bg-blue-950 p-2 md:hidden z-20 transition-all duration-300`}
       >
         {/* Close Button */}
         <div className="flex justify-end">
@@ -58,7 +58,7 @@ const Header = () => {
           />
         </div>
 
-        <nav className="flex flex-col items-center gap-3 text-white font-bold">
+        <nav className="flex flex-col items-center gap-5 text-blue-400 font-bold">
           <Link href="/" onClick={closeMenu}>
             Home
           </Link>
@@ -71,7 +71,7 @@ const Header = () => {
           <Link href="/contact" onClick={closeMenu}>
             Contact
           </Link>
-          <FaCartShopping className="text-white text-xl" />
+          <FaCartShopping className="text-blue-400 text-xl mt-4" />
         </nav>
       </div>
     </header>
